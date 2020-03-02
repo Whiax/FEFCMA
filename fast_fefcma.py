@@ -82,7 +82,7 @@ for i_charA in range(maxrange_to_tryA):
             cov_scores = [0,0,{},None,None]
             valid_ranks = abs(i_charB-i_charA) < rank_limit
             n_already_mapped = sum([e == i_charB for e in rank_mapping.values()])
-            valid_try = valid_ranks and n_already_mapped < mapping_limit_per_char_i
+            valid_try = valid_ranks
             valid_try = valid_try or current_rank_mapping[i_charA] == i_charB
             
             #check ranks compatibility
